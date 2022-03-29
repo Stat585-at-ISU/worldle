@@ -19,8 +19,8 @@
 get_shapes <- function(url, level = 0) {
   assertthat::assert_that(length(url)==1)
   assertthat::assert_that(is.character(url))
-  assertthat::assert_that(valid_url(url))
   assertthat::assert_that(level %in% c(0,1,2,3,4))
+  assertthat::assert_that(valid_url(url))
 
   url_splitted <- strsplit(url, split = "/")[[1]]
   file_name <- url_splitted[length(url_splitted)]
