@@ -19,7 +19,7 @@ we need a bit more explanation here ... The function works with both versions 3.
 url <- 'https://biogeo.ucdavis.edu/data/gadm3.6/shp/gadm36_IRN_shp.zip'
 # url for Bahamas
 url <- "https://geodata.ucdavis.edu/gadm/gadm4.0/shp/gadm40_BHS_shp.zip"
-country <- get_shapes(url)
+country <- worldle::get_shapes(url)
 library(ggplot2)
 library(dplyr)
 country \%>\% thin(tolerance=0.001) \%>\%  ggplot() + geom_sf() + theme_void()
