@@ -32,11 +32,16 @@ remotes::install_github("Stat585-at-ISU/worldle")
 
 How do you play?
 
-```{r example}
+```{r example, eval = FALSE}
 library(worldle)
 ## basic example code
-# play_worldle() # that function doesn't exist yet
+play_worldle() 
 ```
+
+You will be shown a shapefile of a country, you have to guess by typing in the name of a country.
+See whether you can guess it!
+
+
 
 Get the shapefile of a country:
 ```{r eval=FALSE}

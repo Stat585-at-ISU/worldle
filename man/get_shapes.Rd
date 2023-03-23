@@ -20,7 +20,8 @@ url <- 'https://biogeo.ucdavis.edu/data/gadm3.6/shp/gadm36_IRN_shp.zip'
 # url for Bahamas
 url <- "https://geodata.ucdavis.edu/gadm/gadm4.1/shp/gadm41_BHS_shp.zip"
 country <- get_shapes(url)
+url <- "https://geodata.ucdavis.edu/gadm/gadm4.0/shp/gadm40_BHS_shp.zip"
 library(ggplot2)
 library(dplyr)
-country \%>\% thin() \%>\%  ggplot() + geom_sf() + theme_void()
+country \%>\% thin(tolerance=0.001) \%>\%  ggplot() + geom_sf() + theme_void()
 }
