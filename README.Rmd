@@ -35,12 +35,12 @@ How do you play?
 ```{r example}
 library(worldle)
 ## basic example code
-# play_wordle() # that function doesn't exist yet
+# play_worldle() # that function doesn't exist yet
 ```
 
 Get the shapefile of a country:
 ```{r eval=FALSE}
-url <- "https://geodata.ucdavis.edu/gadm/gadm4.0/shp/gadm40_AUT_shp.zip"
+url <- "https://geodata.ucdavis.edu/gadm/gadm4.1/shp/gadm41_AUT_shp.zip"
 austria <- get_shapes(url)
 austria <- thin(austria, 0.001)
 ```
