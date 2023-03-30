@@ -40,6 +40,6 @@ play <- function(sf, name, attempt=1, guess="", unicode) {
     return()
   }
   if (attempt < 6) play(sf, name, attempt+1, guess, unicode)
-  else cat(sprintf("\nSo close! It is %s!"), name)
+  else cat(sprintf("\nSo close! It is %s!", name))
 }
 

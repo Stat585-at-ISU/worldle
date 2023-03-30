@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/Stat585-at-ISU/worldle/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Stat585-at-ISU/worldle/actions/workflows/R-CMD-check.yaml)
+[![Coverage status](https://codecov.io/gh/heike/worldle/branch/main/graph/badge.svg)](https://codecov.io/github/heike/worldle?branch=main)
 <!-- badges: end -->
 
 The goal of worldle is to be able to play a game of guessing a country based on its shape.
@@ -53,6 +54,7 @@ austria <- thin(austria, 0.001)
 
 Now plot the country: 
 ```{r}
+data(austria)
 library(ggplot2)
 library(dplyr)
 

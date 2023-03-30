@@ -23,17 +23,17 @@ How do you play?
 
 ``` r
 library(worldle)
-#> Registered S3 method overwritten by 'dplyr':
-#>   method         from       
-#>   print.location geojsonlint
 ## basic example code
-# play_wordle() # that function doesn't exist yet
+play_worldle() 
 ```
+
+You will be shown a shapefile of a country, you have to guess by typing
+in the name of a country. See whether you can guess it!
 
 Get the shapefile of a country:
 
 ``` r
-url <- "https://geodata.ucdavis.edu/gadm/gadm4.0/shp/gadm40_AUT_shp.zip"
+url <- "https://geodata.ucdavis.edu/gadm/gadm4.1/shp/gadm41_AUT_shp.zip"
 austria <- get_shapes(url)
 austria <- thin(austria, 0.001)
 ```
@@ -41,6 +41,7 @@ austria <- thin(austria, 0.001)
 Now plot the country:
 
 ``` r
+data(austria)
 library(ggplot2)
 library(dplyr)
 #> 

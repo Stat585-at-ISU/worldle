@@ -5,3 +5,4 @@
 lab2-scripts
 docs
 ^\.github$
+^codecov\.yml$
