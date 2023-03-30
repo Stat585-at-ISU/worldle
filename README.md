@@ -4,6 +4,10 @@
 # worldle
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/Stat585-at-ISU/worldle/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Stat585-at-ISU/worldle/actions/workflows/R-CMD-check.yaml)
+[![Coverage
+status](https://codecov.io/gh/Stat585-at-ISU/worldle/branch/main/graph/badge.svg)](https://codecov.io/github/Stat585-at-ISU/worldle?branch=main)
 <!-- badges: end -->
 
 The goal of worldle is to be able to play a game of guessing a country
