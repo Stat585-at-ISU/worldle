@@ -12,7 +12,7 @@ get_shapes(url, level = 0)
 \item{level}{which level to extract? 0 is country outline, 1 is state/territories, for some (but not all) countries exist lower-level country divisions (e.g. counties, municipalities)}
 }
 \description{
-we need a bit more explanation here ... The function works with both versions 3.6 and 4.0 of the GADM library
+we need a bit more explanation here ... The function works with both versions 3.6 and 4.0, 4.1 of the GADM library
 }
 \examples{
 # url for Iran

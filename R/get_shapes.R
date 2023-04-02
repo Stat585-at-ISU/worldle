@@ -1,10 +1,11 @@
 #' Download a shapefile from GADM
 #'
-#' we need a bit more explanation here ... The function works with both versions 3.6 and 4.0 of the GADM library
+#' we need a bit more explanation here ... The function works with both versions 3.6 and 4.0, 4.1 of the GADM library
 #' @param url address to zipped file shapes
 #' @param level which level to extract? 0 is country outline, 1 is state/territories, for some (but not all) countries exist lower-level country divisions (e.g. counties, municipalities)
 #' @importFrom sf read_sf
 #' @importFrom utils download.file unzip
+#' @importFrom stringr str_detect
 #' @export
 #' @examples
 #' # url for Iran
@@ -18,8 +19,13 @@
 #' country %>% thin(tolerance=0.001) %>%  ggplot() + geom_sf() + theme_void()
 get_shapes <- function(url, level = 0) {
 
+  stopifnot(valid_url(url)) # checks if the url is valid
+
   url_splitted <- strsplit(url, split = "/")[[1]]
   file_name <- url_splitted[length(url_splitted)]
+  stopifnot(str_detect(file_name, "\\.zip$"))
+#  browser()
+
   # Prepare for download
   datadir <- tempdir()
   destfile <- file.path(datadir, file_name)
@@ -43,7 +49,6 @@ get_shapes <- function(url, level = 0) {
 
   sf::read_sf(sf_file)
 }
-
 
 
 #' helper function

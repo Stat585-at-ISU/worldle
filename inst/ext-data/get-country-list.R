@@ -17,3 +17,10 @@ countries <- countries %>% mutate(
 )
 
 use_data(countries, internal = TRUE)
+
+################
+# austria object
+austria <- get_shapes("https://geodata.ucdavis.edu/gadm/gadm3.6/shp/gadm36_AUT_shp.zip")
+austria <- thin(austria, 0.001)
+use_data(austria, overwrite=TRUE)
+

@@ -3,10 +3,9 @@
 #' @examples
 #' \dontrun{
 #' # created from
-#' url <- "https://geodata.ucdavis.edu/gadm/gadm4.0/shp/gadm40_AUT_shp.zip"
-#' austria <- get_shapes(url, level=1)
-#' austria <- austria %>% thin(tolerance = 0.0001)
-#' usethis::use_data(austria, overwrite=TRUE)
+#' austria <- get_shapes("https://geodata.ucdavis.edu/gadm/gadm3.6/shp/gadm36_AUT_shp.zip")
+#' austria <- thin(austria, 0.001)
+#' use_data(austria, overwrite=TRUE)
 #' }
 #' library(ggplot2)
 #' library(dplyr)
