@@ -5,7 +5,7 @@
 \alias{austria}
 \title{Shape file for Austria}
 \format{
-An object of class \code{sf} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 9 rows and 12 columns.
+An object of class \code{sf} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1 rows and 3 columns.
 }
 \usage{
 austria
@@ -16,10 +16,9 @@ Shape file for Austria
 \examples{
 \dontrun{
 # created from
-url <- "https://geodata.ucdavis.edu/gadm/gadm4.0/shp/gadm40_AUT_shp.zip"
-austria <- get_shapes(url, level=1)
-austria <- austria \%>\% thin(tolerance = 0.0001)
-usethis::use_data(austria, overwrite=TRUE)
+austria <- get_shapes("https://geodata.ucdavis.edu/gadm/gadm3.6/shp/gadm36_AUT_shp.zip")
+austria <- thin(austria, 0.001)
+use_data(austria, overwrite=TRUE)
 }
 library(ggplot2)
 library(dplyr)
